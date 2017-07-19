@@ -23,5 +23,11 @@ namespace mvc.Controllers
         {
             return View();
         }
+        public ActionResult Add(video video)
+        {
+            _dbContext.Videos.Add(video);
+            _dbContext.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }
