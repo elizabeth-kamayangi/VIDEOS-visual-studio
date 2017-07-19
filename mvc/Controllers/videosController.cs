@@ -10,6 +10,7 @@ namespace mvc.Controllers
 
     public videosController()
     {
+
         _dbContext = new ApplicationDbContext();
         
     }
@@ -17,6 +18,10 @@ namespace mvc.Controllers
         {
         var videos = _dbContext.Videos.ToList();
         return View(videos);
+        }
+        public ActionResult New()
+        {
+            return View();
         }
     }
 }
