@@ -38,5 +38,20 @@ namespace mvc.Controllers
 
             return View(video);
         }
+        [HttpPost]
+        public ActionResult Update(video video)
+        {
+            var videoInDb = _dbContext.Videos.SingleOrDefault(v => v.Id == video.Id);
+
+            if (videoInDb == null)
+                return HttpNotFound();
+
+            videoInDb.Title = video.Title;
+            videoInDb.Description = video.Description;
+            videoInDb.Genre = video.Genre;
+            _dbContext.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
     }
 }
