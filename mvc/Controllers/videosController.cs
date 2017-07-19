@@ -53,5 +53,14 @@ namespace mvc.Controllers
 
             return RedirectToAction("Index");
         }
+        public ActionResult Delete(int id)
+        {
+            var video = _dbContext.Videos.SingleOrDefault(v => v.Id == id);
+
+            if (video == null)
+                return HttpNotFound();
+
+            return View(video);
+        }
     }
 }
