@@ -244,6 +244,7 @@
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\videos\Index.cshtml" />
     <Content Include="Views\videos\New.cshtml" />
+    <Content Include="Views\videos\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
