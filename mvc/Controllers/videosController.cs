@@ -29,5 +29,14 @@ namespace mvc.Controllers
             _dbContext.SaveChanges();
             return RedirectToAction("Index");
         }
+        public ActionResult Edit(int id)
+        {
+            var video = _dbContext.Videos.SingleOrDefault(v => v.Id == id);
+
+            if (video == null)
+                return HttpNotFound();
+
+            return View(video);
+        }
     }
 }
