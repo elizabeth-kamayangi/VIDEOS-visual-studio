@@ -246,6 +246,7 @@
     <Content Include="Views\videos\New.cshtml" />
     <Content Include="Views\videos\Edit.cshtml" />
     <Content Include="Views\videos\_videoForm.cshtml" />
+    <Content Include="Views\videos\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
