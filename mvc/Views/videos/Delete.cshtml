@@ -12,5 +12,13 @@
     <li>Title: @Model.Title</li>
     <li>Description: @Model.Description</li>
 </ul>
+@using (Html.BeginForm("DoDelete", "Videos", FormMethod.Post))
+{
+
+    @Html.HiddenFor(m => m.Id)
+    <input type="submit" class="btn btn-danger" value="Yes, Delete it!" />
+    @Html.ActionLink("No, back to videos", "Index")
+}
+
 
 
